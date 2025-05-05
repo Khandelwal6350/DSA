@@ -1,4 +1,4 @@
-public class SolutionNO790 {
+public class SolutionNo790 {
 
     public static int numTilings(int n) {
         int MOD = 1_000_000_007;
