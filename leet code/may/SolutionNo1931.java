@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class SolutionNo1931 {
     private static final int MOD = 1_000_000_007;
 
     public int colorTheGrid(int m, int n) {
