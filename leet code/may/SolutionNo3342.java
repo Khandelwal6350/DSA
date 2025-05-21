@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class SolutionNo3342 {
     private static final int[] dir = {-1, 0, 1, 0, -1};
 
     static class Node {
