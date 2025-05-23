@@ -1,4 +1,4 @@
-package geeksforgeeks;
+
 
 public class Solution_kth_smallest_no {
    
