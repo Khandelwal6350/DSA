@@ -1,0 +1,45 @@
+import java.util.*;
+
+class Solution_leaf_nodes_from_preorder_traversal_of_BST {
+    public ArrayList<Integer> leafNodes(int[] preorder) {
+        Stack<Integer> stack = new Stack<>();
+        ArrayList<Integer> result = new ArrayList<>();
+
+        int n = preorder.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            boolean found = false;
+
+            if (preorder[i] > preorder[i + 1]) {
+                stack.push(preorder[i]);
+            } else {
+                int temp = -1;
+                while (!stack.isEmpty() && preorder[i + 1] > stack.peek()) {
+                    temp = stack.pop();
+                    found = true;
+                }
+
+                if (found) {
+                    result.add(preorder[i]);
+                }
+            }
+        }
+
+        // Last node is always a leaf
+        result.add(preorder[n - 1]);
+
+        return result;
+    }
+
+    // For local testing
+    public static void main(String[] args) {
+        int[] preorder = {890, 325, 290, 530, 965};
+
+        Solution ob = new Solution();
+        ArrayList<Integer> ans = ob.leafNodes(preorder);
+
+        for (int val : ans) {
+            System.out.print(val + " ");
+        }
+    }
+}
