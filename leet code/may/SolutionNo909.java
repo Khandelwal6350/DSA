@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class SolutionNo909 {
     public int snakesAndLadders(int[][] board) {
         int n = board.length;
         boolean[] visited = new boolean[n * n + 1];
